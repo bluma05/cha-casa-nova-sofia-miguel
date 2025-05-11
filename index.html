@@ -3,204 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chá de Casa Nova & Hóspedes - Sofia & Miguel</title>
+    <title>Chá de Casa Nova & Hóspedes – Alex & Odelice</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #faf9f7;
-            color: #5a4a42;
-        }
-        .playfair {
-            font-family: 'Playfair Display', serif;
-        }
-        .gold-gradient {
-            background: linear-gradient(90deg, #d4af37 0%, #f9e076 100%);
-        }
-        .gold-text {
-            background: linear-gradient(90deg, #d4af37 0%, #f9e076 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .modal {
-            transition: opacity 0.3s ease;
-        }
-        .modal-content {
-            transform: scale(0.9);
-            transition: transform 0.3s ease;
-        }
-        .modal.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-        .modal.active .modal-content {
-            transform: scale(1);
-        }
+        body { font-family: 'Montserrat', sans-serif; background: #faf9f7; color: #5a4a42; }
+        .playfair { font-family: 'Playfair Display', serif; }
+        .gold-text { background: linear-gradient(90deg, #d4af37 0%, #f9e076 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .chosen { opacity: 0.5; pointer-events: none; }
     </style>
 </head>
 <body class="overflow-x-hidden">
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1665967330345-95e0b796d5e6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3Mzg2NzB8MHwxfHNlYXJjaHwxfHxjYXNhJTIwbm92YSUyMGVsZWdhbnRlJTIwbHV4byUyMGFjb25jaGVnb3xlbnwwfHx8fDE3NDY5MjI1NDZ8MA&ixlib=rb-4.1.0&q=85');">
-        <div class="text-center px-4">
-            <h1 class="playfair text-5xl md:text-7xl font-light mb-4 gold-text">Chá de Casa Nova & Hóspedes</h1>
-            <div class="playfair text-2xl md:text-3xl font-light mb-8">Sofia & Miguel</div>
-            <div class="w-24 h-px gold-gradient mx-auto mb-8"></div>
-            <p class="max-w-md mx-auto mb-12 text-lg">Venha celebrar conosco este novo lar e criar memórias especiais!</p>
-            <a href="#rsvp" class="px-8 py-3 bg-transparent border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition duration-300">Confirmar Presença</a>
-        </div>
-        <div class="absolute bottom-10 left-0 right-0 text-center">
-            <a href="#details" class="text-[#d4af37] animate-bounce inline-block">
-                <i class="fas fa-chevron-down text-2xl"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Details Section -->
-    <section id="details" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="playfair text-4xl text-center mb-16 gold-text">Detalhes do Evento</h2>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-                <div class="text-center">
-                    <div class="playfair text-3xl mb-4">Quando</div>
-                    <p class="text-xl mb-2">12 de Outubro de 2025</p>
-                    <p class="text-gray-600">RSVP até 5 de Outubro</p>
-                </div>
-                <div class="text-center">
-                    <div class="playfair text-3xl mb-4">Onde</div>
-                    <p class="text-xl mb-2">Rua das Flores, 123</p>
-                    <p class="text-gray-600">Lisboa, Portugal</p>
-                </div>
-            </div>
-            <div class="max-w-2xl mx-auto mt-16">
-                <h3 class="playfair text-2xl text-center mb-8">Programação</h3>
-                <div class="space-y-6">
-                    <div class="flex items-start">
-                        <div class="w-24 flex-shrink-0 text-right pr-6 pt-1">
-                            <span class="text-[#d4af37]">16h</span>
-                        </div>
-                        <div class="border-l-2 border-[#d4af37] pl-6 pb-6">
-                            <h4 class="playfair text-xl mb-1">Recepção & Boas-vindas</h4>
-                            <p class="text-gray-600">Aconchego e petiscos para todos</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="w-24 flex-shrink-0 text-right pr-6 pt-1">
-                            <span class="text-[#d4af37]">17h</span>
-                        </div>
-                        <div class="border-l-2 border-[#d4af37] pl-6 pb-6">
-                            <h4 class="playfair text-xl mb-1">Tour pela Casa</h4>
-                            <p class="text-gray-600">Conheça cada cantinho do novo lar</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="w-24 flex-shrink-0 text-right pr-6 pt-1">
-                            <span class="text-[#d4af37]">18h</span>
-                        </div>
-                        <div class="border-l-2 border-[#d4af37] pl-6 pb-6">
-                            <h4 class="playfair text-xl mb-1">Chá & Conversa</h4>
-                            <p class="text-gray-600">Bebidas, doces e muita conversa boa</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="w-24 flex-shrink-0 text-right pr-6 pt-1">
-                            <span class="text-[#d4af37]">19h</span>
-                        </div>
-                        <div class="border-l-2 border-[#d4af37] pl-6">
-                            <h4 class="playfair text-xl mb-1">Brindes & Surpresas</h4>
-                            <p class="text-gray-600">Sorteios e agradecimentos especiais</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="relative min-h-[60vh] flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)), url('https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=900&q=80');">
+        <div class="text-center px-4 py-16">
+            <h1 class="playfair text-4xl md:text-6xl font-light mb-4 gold-text">Chá de Casa Nova & Hóspedes</h1>
+            <div class="playfair text-2xl md:text-3xl font-light mb-6">Alex & Odelice</div>
+            <div class="w-24 h-px mx-auto mb-8" style="background: linear-gradient(90deg, #d4af37 0%, #f9e076 100%);"></div>
+            <p class="max-w-md mx-auto mb-8 text-lg">Venha celebrar conosco este novo capítulo! Esperamos você para um momento especial de alegria e aconchego.</p>
+            <div class="text-lg mb-2"><i class="fas fa-calendar-alt text-[#d4af37] mr-2"></i>12 de Outubro de 2025, 16h</div>
+            <div class="text-lg"><i class="fas fa-map-marker-alt text-[#d4af37] mr-2"></i>Rua das Flores, 123, Lisboa</div>
         </div>
     </section>
 
     <!-- Lista de Presentes Section -->
-    <section id="presentes" class="py-20 bg-[#faf9f7]">
+    <section id="presentes" class="py-16 bg-[#faf9f7]">
         <div class="container mx-auto px-4 max-w-3xl">
-            <h2 class="playfair text-4xl text-center mb-8 gold-text">Lista de Presentes</h2>
+            <h2 class="playfair text-3xl text-center mb-8 gold-text">Lista de Presentes</h2>
             <p class="text-center text-lg mb-10 text-gray-700">
-                Veja sugestões de presentes para tornar nosso novo lar ainda mais especial!<br>
-                Selecione o que deseja levar e informe no RSVP.
+                Escolha um presente para tornar nosso novo lar ainda mais especial!<br>
+                Cada presente só pode ser escolhido uma vez.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="flex items-center bg-white rounded-lg shadow p-4">
-                    <i class="fas fa-bath text-[#d4af37] text-2xl mr-4"></i>
-                    <span>Jogo de Toalhas</span>
-                </div>
-                <div class="flex items-center bg-white rounded-lg shadow p-4">
-                    <i class="fas fa-glass-cheers text-[#d4af37] text-2xl mr-4"></i>
-                    <span>Conjunto de Copos</span>
-                </div>
-                <div class="flex items-center bg-white rounded-lg shadow p-4">
-                    <i class="fas fa-utensil-spoon text-[#d4af37] text-2xl mr-4"></i>
-                    <span>Panela</span>
-                </div>
-                <div class="flex items-center bg-white rounded-lg shadow p-4">
-                    <i class="fas fa-seedling text-[#d4af37] text-2xl mr-4"></i>
-                    <span>Vaso Decorativo</span>
-                </div>
-                <div class="flex items-center bg-white rounded-lg shadow p-4">
-                    <i class="fas fa-bed text-[#d4af37] text-2xl mr-4"></i>
-                    <span>Jogo de Cama</span>
-                </div>
-                <div class="flex items-center bg-white rounded-lg shadow p-4">
-                    <i class="fas fa-plate-wheat text-[#d4af37] text-2xl mr-4"></i>
-                    <span>Aparelho de Jantar</span>
-                </div>
-                <div class="flex items-center bg-white rounded-lg shadow p-4">
-                    <i class="fas fa-coffee text-[#d4af37] text-2xl mr-4"></i>
-                    <span>Cafeteira</span>
-                </div>
-                <div class="flex items-center bg-white rounded-lg shadow p-4">
-                    <i class="fas fa-rug text-[#d4af37] text-2xl mr-4"></i>
-                    <span>Tapete</span>
-                </div>
-                <div class="flex items-center bg-white rounded-lg shadow p-4">
-                    <i class="fas fa-apple-alt text-[#d4af37] text-2xl mr-4"></i>
-                    <span>Fruteira</span>
-                </div>
-                <div class="flex items-center bg-white rounded-lg shadow p-4">
-                    <i class="fas fa-pepper-hot text-[#d4af37] text-2xl mr-4"></i>
-                    <span>Kit de Temperos</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="py-20 bg-[#faf9f7]">
-        <div class="container mx-auto px-4">
-            <h2 class="playfair text-4xl text-center mb-16 gold-text">Nosso Novo Lar</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                <div class="gallery-item cursor-pointer overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-                    <img src="https://images.unsplash.com/photo-1665967330345-95e0b796d5e6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3Mzg2NzB8MHwxfHNlYXJjaHwxfHxjYXNhJTIwbm92YSUyMGVsZWdhbnRlJTIwbHV4byUyMGFjb25jaGVnb3xlbnwwfHx8fDE3NDY5MjI1NDZ8MA&ixlib=rb-4.1.0&q=85" alt="Casa nova elegante" class="w-full h-80 object-cover">
-                </div>
-                <div class="gallery-item cursor-pointer overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-                    <img src="https://images.unsplash.com/photo-1558043279-a860bfe6d3b5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3Mzg2NzB8MHwxfHNlYXJjaHwyfHxjYXNhJTIwbm92YSUyMGVsZWdhbnRlJTIwbHV4byUyMGFjb25jaGVnb3xlbnwwfHx8fDE3NDY5MjI1NDZ8MA&ixlib=rb-4.1.0&q=85" alt="Mesa posta aconchegante" class="w-full h-80 object-cover">
-                </div>
-                <div class="gallery-item cursor-pointer overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
-                    <img src="https://images.unsplash.com/photo-1543394305-1dce3e17815d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3Mzg2NzB8MHwxfHNlYXJjaHwzfHxjYXNhJTIwbm92YSUyMGVsZWdhbnRlJTIwbHV4byUyMGFjb25jaGVnb3xlbnwwfHx8fDE3NDY5MjI1NDZ8MA&ixlib=rb-4.1.0&q=85" alt="Detalhe de decoração" class="w-full h-80 object-cover">
-                </div>
-            </div>
+            <div id="gift-list" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         </div>
     </section>
 
     <!-- RSVP Section -->
-    <section id="rsvp" class="py-20 bg-white">
+    <section id="rsvp" class="py-16 bg-white">
         <div class="container mx-auto px-4 max-w-2xl">
-            <h2 class="playfair text-4xl text-center mb-16 gold-text">Confirme sua Presença</h2>
-            <form class="space-y-6">
+            <h2 class="playfair text-3xl text-center mb-8 gold-text">Confirme sua Presença</h2>
+            <form id="rsvp-form" class="space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="name" class="block mb-2">Nome Completo</label>
-                        <input type="text" id="name" class="w-full px-4 py-2 border-b border-gray-300 focus:border-[#d4af37] focus:outline-none">
+                        <input type="text" id="name" required class="w-full px-4 py-2 border-b border-gray-300 focus:border-[#d4af37] focus:outline-none">
                     </div>
                     <div>
                         <label for="email" class="block mb-2">Email</label>
-                        <input type="email" id="email" class="w-full px-4 py-2 border-b border-gray-300 focus:border-[#d4af37] focus:outline-none">
+                        <input type="email" id="email" required class="w-full px-4 py-2 border-b border-gray-300 focus:border-[#d4af37] focus:outline-none">
                     </div>
                 </div>
                 <div>
@@ -213,21 +64,8 @@
                     </select>
                 </div>
                 <div>
-                    <label for="gift" class="block mb-2">Presente que pretende levar</label>
-                    <select id="gift" class="w-full px-4 py-2 border-b border-gray-300 focus:border-[#d4af37] focus:outline-none">
-                        <option value="">Selecione um presente</option>
-                        <option value="Jogo de Toalhas">Jogo de Toalhas</option>
-                        <option value="Conjunto de Copos">Conjunto de Copos</option>
-                        <option value="Panela">Panela</option>
-                        <option value="Vaso Decorativo">Vaso Decorativo</option>
-                        <option value="Jogo de Cama">Jogo de Cama</option>
-                        <option value="Aparelho de Jantar">Aparelho de Jantar</option>
-                        <option value="Cafeteira">Cafeteira</option>
-                        <option value="Tapete">Tapete</option>
-                        <option value="Fruteira">Fruteira</option>
-                        <option value="Kit de Temperos">Kit de Temperos</option>
-                        <option value="Outro">Outro</option>
-                    </select>
+                    <label for="gift-select" class="block mb-2">Presente que pretende levar</label>
+                    <select id="gift-select" required class="w-full px-4 py-2 border-b border-gray-300 focus:border-[#d4af37] focus:outline-none"></select>
                 </div>
                 <div>
                     <label class="block mb-4">Você comparecerá?</label>
@@ -247,80 +85,96 @@
                     <textarea id="message" rows="3" class="w-full px-4 py-2 border-b border-gray-300 focus:border-[#d4af37] focus:outline-none"></textarea>
                 </div>
                 <div class="pt-6">
-                    <button type="submit" class="w-full py-3 gold-gradient text-white hover:opacity-90 transition duration-300">Enviar Confirmação</button>
+                    <button type="submit" class="w-full py-3 bg-gradient-to-r from-[#d4af37] to-[#f9e076] text-white font-semibold rounded-lg hover:opacity-90 transition duration-300">Enviar Confirmação</button>
                 </div>
             </form>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 bg-[#faf9f7] text-center">
-        <div class="container mx-auto px-4">
-            <div class="playfair text-2xl mb-6 gold-text">Sofia & Miguel</div>
-            <div class="mb-6">12 de Outubro de 2025</div>
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="#" class="text-[#d4af37] hover:text-[#b89930]"><i class="fab fa-instagram text-xl"></i></a>
-                <a href="#" class="text-[#d4af37] hover:text-[#b89930]"><i class="fas fa-envelope text-xl"></i></a>
-            </div>
-            <div class="text-sm text-gray-500">© 2025 Sofia & Miguel. Todos os direitos reservados.</div>
-        </div>
+    <footer class="py-10 bg-[#faf9f7] text-center">
+        <div class="playfair text-2xl mb-2 gold-text">Alex & Odelice</div>
+        <div class="mb-2">12 de Outubro de 2025</div>
+        <div class="text-sm text-gray-500">© 2025 Alex & Odelice. Todos os direitos reservados.</div>
     </footer>
 
-    <!-- Gallery Modal -->
-    <div id="gallery-modal" class="modal fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="modal-content relative w-full max-w-4xl p-4">
-            <button id="close-modal" class="absolute -top-12 right-0 text-white text-3xl hover:text-[#d4af37] transition-colors duration-300">
-                <i class="fas fa-times"></i>
-            </button>
-            <img id="modal-image" src="" alt="" class="w-full max-h-[80vh] object-contain">
-        </div>
-    </div>
-
     <script>
-        // Gallery modal functionality
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        const modal = document.getElementById('gallery-modal');
-        const modalImg = document.getElementById('modal-image');
-        const closeModal = document.getElementById('close-modal');
+        // Lista de presentes
+        const gifts = [
+            { name: "Máquina de Lavar e Secar", icon: "fa-soap" },
+            { name: "Lava-louças", icon: "fa-sink" },
+            { name: "Micro-ondas", icon: "fa-bacon" },
+            { name: "Frigorífico", icon: "fa-snowflake" },
+            { name: "TV 50 polegadas", icon: "fa-tv" },
+            { name: "Conjunto de Pratos Finos", icon: "fa-plate-wheat" },
+            { name: "Aspirador Robô", icon: "fa-robot" },
+            { name: "Máquina de Café Expresso", icon: "fa-mug-hot" },
+            { name: "Air Fryer", icon: "fa-bowl-food" },
+            { name: "Conjunto de Panelas Premium", icon: "fa-pot-food" }
+        ];
 
-        galleryItems.forEach(item => {
-            item.addEventListener('click', () => {
-                const imgSrc = item.querySelector('img').src;
-                modalImg.src = imgSrc;
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
+        // Carregar presentes escolhidos do LocalStorage
+        function getChosenGifts() {
+            return JSON.parse(localStorage.getItem('chosenGifts') || "[]");
+        }
+        function setChosenGifts(arr) {
+            localStorage.setItem('chosenGifts', JSON.stringify(arr));
+        }
+
+        // Renderizar lista de presentes
+        function renderGiftList() {
+            const chosen = getChosenGifts();
+            const giftList = document.getElementById('gift-list');
+            giftList.innerHTML = '';
+            gifts.forEach((gift, idx) => {
+                const isChosen = chosen.includes(gift.name);
+                const card = document.createElement('div');
+                card.className = `flex items-center bg-white rounded-lg shadow p-4 mb-2 ${isChosen ? 'chosen' : ''}`;
+                card.innerHTML = `
+                    <i class="fas ${gift.icon} text-[#d4af37] text-2xl mr-4"></i>
+                    <span class="flex-1">${gift.name}</span>
+                    ${isChosen ? '<span class="ml-4 px-3 py-1 bg-[#d4af37] text-white text-xs rounded">Escolhido</span>' : ''}
+                `;
+                giftList.appendChild(card);
             });
-        });
+        }
 
-        closeModal.addEventListener('click', () => {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        // Renderizar opções no select do RSVP
+        function renderGiftSelect() {
+            const chosen = getChosenGifts();
+            const select = document.getElementById('gift-select');
+            select.innerHTML = '<option value="">Selecione um presente</option>';
+            gifts.forEach(gift => {
+                if (!chosen.includes(gift.name)) {
+                    const opt = document.createElement('option');
+                    opt.value = gift.name;
+                    opt.textContent = gift.name;
+                    select.appendChild(opt);
+                }
             });
-        });
+        }
 
-        // Form submission
-        const form = document.querySelector('form');
-        form.addEventListener('submit', (e) => {
+        // RSVP submit
+        document.getElementById('rsvp-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Obrigado por confirmar sua presença! Entraremos em contato em breve.');
-            form.reset();
+            const gift = document.getElementById('gift-select').value;
+            if (!gift) {
+                alert('Por favor, selecione um presente disponível.');
+                return;
+            }
+            // Salvar presente como escolhido
+            const chosen = getChosenGifts();
+            chosen.push(gift);
+            setChosenGifts(chosen);
+            renderGiftList();
+            renderGiftSelect();
+            alert('Obrigado por confirmar sua presença e escolher seu presente!');
+            this.reset();
         });
+
+        // Inicialização
+        renderGiftList();
+        renderGiftSelect();
     </script>
 </body>
 </html>
